@@ -37,14 +37,14 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Solicite seu{" "}
-              <span className="bg-gradient-accent bg-clip-text text-transparent">
-                Orçamento Gratuito
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Pronto pra{" "}
+              <span className="text-secondary">
+                escalar seu negócio nos EUA?
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Preencha o formulário abaixo e entraremos em contato em até 24 horas
+              Preencha abaixo e um especialista ONNE entrará em contato em até 24 horas
             </p>
           </div>
 
@@ -132,7 +132,7 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Telefone / WhatsApp *
+                    WhatsApp *
                   </label>
                   <Input
                     required
@@ -145,12 +145,23 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Mensagem *
+                    Cidade / Estado *
+                  </label>
+                  <Input
+                    required
+                    placeholder="Ex: Miami, FL"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Mensagem
                   </label>
                   <Textarea
-                    required
-                    placeholder="Conte-nos sobre seu projeto: tipo de serviço, área estimada, localização..."
-                    rows={6}
+                    placeholder="Ex: Quero anúncios pro meu serviço de flooring"
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
@@ -158,11 +169,11 @@ const Contact = () => {
 
                 <Button 
                   type="submit" 
-                  variant="cta" 
+                  variant="neon" 
                   size="lg" 
                   className="w-full"
                 >
-                  Enviar Solicitação
+                  Falar com a ONNE Agora
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">

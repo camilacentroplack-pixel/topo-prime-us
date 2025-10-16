@@ -50,8 +50,8 @@ const Header = () => {
             >
               Contato
             </button>
-            <Button variant="cta" size="default" onClick={() => scrollToSection("contato")}>
-              Orçamento Grátis
+            <Button variant="neon" size="default" onClick={() => scrollToSection("contato")}>
+              Contato
             </Button>
           </nav>
 
@@ -92,8 +92,8 @@ const Header = () => {
             >
               Contato
             </button>
-            <Button variant="cta" size="default" onClick={() => scrollToSection("contato")}>
-              Orçamento Grátis
+            <Button variant="neon" size="default" onClick={() => scrollToSection("contato")}>
+              Contato
             </Button>
           </nav>
         )}

@@ -57,6 +57,7 @@ export default {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-accent": "var(--gradient-accent)",
         "gradient-subtle": "var(--gradient-subtle)",
+        "gradient-neon": "var(--gradient-neon)",
       },
       boxShadow: {
         soft: "var(--shadow-soft)",
@@ -64,6 +65,7 @@ export default {
         large: "var(--shadow-large)",
         glow: "var(--shadow-glow)",
         accent: "var(--shadow-accent)",
+        "neon-blue": "var(--shadow-neon-blue)",
       },
       transitionTimingFunction: {
         smooth: "var(--transition-smooth)",

@@ -1,86 +1,78 @@
-import { ClipboardCheck, Palette, Hammer, Sparkles, Shield } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Search, Lightbulb, Rocket, TrendingUp, FileText } from "lucide-react";
 
 const steps = [
   {
+    icon: Search,
     number: "01",
-    icon: ClipboardCheck,
-    title: "Avaliação e Orçamento",
-    description: "Visitamos sua propriedade, avaliamos o local e fornecemos um orçamento detalhado gratuito",
+    title: "Análise gratuita",
+    description: "Entendemos seu negócio e público-alvo nos EUA.",
   },
   {
+    icon: Lightbulb,
     number: "02",
-    icon: Palette,
-    title: "Escolha de Materiais + Design",
-    description: "Ajudamos você a escolher os pavers ideais e criamos um design personalizado",
+    title: "Planejamento",
+    description: "Criamos a estratégia digital ideal para seu segmento.",
   },
   {
+    icon: Rocket,
     number: "03",
-    icon: Hammer,
-    title: "Execução da Instalação",
-    description: "Nossa equipe realiza a instalação com técnicas profissionais e atenção aos detalhes",
+    title: "Execução",
+    description: "Lançamos anúncios, landing e conteúdo otimizados.",
   },
   {
+    icon: TrendingUp,
     number: "04",
-    icon: Sparkles,
-    title: "Acabamento + Entrega",
-    description: "Finalizamos com selagem, limpeza e apresentamos o resultado final impecável",
+    title: "Otimização",
+    description: "Monitoramos e ajustamos tudo pra gerar mais resultados.",
   },
   {
+    icon: FileText,
     number: "05",
-    icon: Shield,
-    title: "Garantia + Manutenção",
-    description: "Fornecemos garantia do serviço e orientações para manter a beleza por anos",
+    title: "Relatórios",
+    description: "Você acompanha o crescimento real do seu negócio.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Como{" "}
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
-                Funciona
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Processo transparente do início ao fim
-            </p>
-          </div>
+    <section id="como-funciona" className="py-24 bg-background relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            Como{" "}
+            <span className="bg-gradient-neon bg-clip-text text-transparent">
+              funciona
+            </span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Passo a passo para transformar seu negócio digital
+          </p>
+        </div>
 
-          <div className="relative">
-            {/* Connection Line - Hidden on mobile */}
-            <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-border" />
-
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {steps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div key={index} className="relative">
-                    {/* Step Number & Icon */}
-                    <div className="flex flex-col items-center mb-4">
-                      <div className="relative">
-                        <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-medium mb-2 relative z-10">
-                          <Icon className="w-8 h-8 text-primary-foreground" />
-                        </div>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center text-xs font-bold shadow-soft">
-                          {step.number}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="text-center">
-                      <h3 className="font-bold text-lg mb-2 text-foreground">{step.title}</h3>
-                      <p className="text-sm text-muted-foreground">{step.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <Card 
+                key={index} 
+                className="relative p-6 bg-card/30 backdrop-blur-sm border-border hover:border-secondary/50 hover:shadow-medium transition-all group"
+              >
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-neon flex items-center justify-center font-bold text-xl text-background shadow-glow">
+                  {step.number}
+                </div>
+                
+                <div className="mt-4">
+                  <Icon className="w-10 h-10 text-secondary mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-bold mb-2 text-foreground">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

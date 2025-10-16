@@ -1,31 +1,25 @@
-import { Facebook, Instagram, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">ONNE AGENCY</h3>
-            <p className="text-background/80 mb-4">
-              Transformando áreas externas em ambientes premium para brasileiros 
-              empreendedores nos EUA. Qualidade, durabilidade e acabamento impecável.
+            <h3 className="text-2xl font-bold bg-gradient-neon bg-clip-text text-transparent mb-4">ONNE AGENCY</h3>
+            <p className="text-muted-foreground mb-4">
+              Transformando visão em resultados reais. Marketing inteligente para brasileiros nos EUA.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all" aria-label="Instagram">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
+              <a href="#" className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all" aria-label="LinkedIn">
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -59,30 +53,18 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contato</h4>
-            <ul className="space-y-3 text-background/80">
-              <li className="flex items-center gap-2">
-                <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} />
-                <span className="break-all">contato@onneagency.com</span>
-              </li>
+            <h4 className="font-semibold text-foreground mb-4">Informações</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>📞 +1 (555) 123-4567</li>
+              <li>📧 contato@onneagency.com</li>
+              <li>🌎 Atendendo todo o território dos EUA</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/60">
-          <p>© 2025 ONNE AGENCY. Todos os direitos reservados.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-background transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="hover:text-background transition-colors">
-              Termos de Serviço
-            </a>
-          </div>
+        <div className="border-t border-border pt-8 text-center">
+          <p className="text-sm text-muted-foreground">© 2025 ONNE AGENCY. Todos os direitos reservados.</p>
+          <p className="text-xs text-muted-foreground mt-2">Marketing inteligente para brasileiros nos EUA.</p>
         </div>
       </div>
     </footer>
