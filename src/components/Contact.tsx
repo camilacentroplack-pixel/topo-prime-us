@@ -11,25 +11,26 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    city: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message
-    const message = `Olá! Meu nome é ${formData.name}.%0A%0AEmail: ${formData.email}%0ATelefone: ${formData.phone}%0A%0AMensagem: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5562996958723?text=${message}`;
+    // Create email
+    const subject = `Novo Contato - ${formData.name}`;
+    const body = `Olá! Meu nome é ${formData.name}.\n\nEmail: ${formData.email}\nTelefone: ${formData.phone}\nCidade/Estado: ${formData.city}\n\nMensagem: ${formData.message}`;
+    const mailtoLink = `mailto:onneagency@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, "_blank");
-    
-    toast.success("Redirecionando para WhatsApp...", {
-      description: "Em breve entraremos em contato!",
+    window.open(mailtoLink, "_blank");
+
+    toast.success("Abrindo seu cliente de e-mail...", {
+      description: "Por favor, envie o e-mail para continuar a conversa!",
     });
     
     // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", city: "", message: "" });
   };
 
   return (
@@ -57,8 +58,8 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">WhatsApp</h3>
-                    <p className="text-sm text-muted-foreground">+55 62 99695-8723</p>
+                    <h3 className="font-semibold mb-1">Telefone</h3>
+                    <p className="text-sm text-muted-foreground">+55 62 996958723</p>
                     <p className="text-xs text-muted-foreground mt-1">
                       Segunda a Sábado, 8h - 18h
                     </p>
@@ -137,7 +138,7 @@ const Contact = () => {
                   <Input
                     required
                     type="tel"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+55 62 996958723"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
@@ -150,8 +151,8 @@ const Contact = () => {
                   <Input
                     required
                     placeholder="Ex: Miami, FL"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    value={formData.city}
+                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                   />
                 </div>
 
@@ -177,7 +178,7 @@ const Contact = () => {
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  Ao enviar, você será redirecionado para o WhatsApp para continuar a conversa
+                  Ao enviar, seu cliente de e-mail será aberto para que você possa enviar a mensagem.
                 </p>
               </form>
             </Card>
