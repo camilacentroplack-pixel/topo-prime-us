@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   const handleFreeLanding = () => {
-    const whatsappUrl = `https://wa.me/15551234567?text=Olá! Gostaria de solicitar uma Landing Page Grátis para meu negócio.`;
+    const whatsappUrl = `https://wa.me/5562996958723?text=Olá! Gostaria de solicitar uma Landing Page Grátis para meu negócio.`;
     window.open(whatsappUrl, "_blank");
   };
 

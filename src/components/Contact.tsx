@@ -19,7 +19,7 @@ const Contact = () => {
     
     // Create WhatsApp message
     const message = `Olá! Meu nome é ${formData.name}.%0A%0AEmail: ${formData.email}%0ATelefone: ${formData.phone}%0A%0AMensagem: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${message}`;
+    const whatsappUrl = `https://wa.me/5562996958723?text=${message}`;
     
     // Open WhatsApp in new tab
     window.open(whatsappUrl, "_blank");
@@ -57,8 +57,8 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Telefone</h3>
-                    <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                    <h3 className="font-semibold mb-1">WhatsApp</h3>
+                    <p className="text-sm text-muted-foreground">+55 62 99695-8723</p>
                     <p className="text-xs text-muted-foreground mt-1">
                       Segunda a Sábado, 8h - 18h
                     </p>
@@ -74,7 +74,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <p className="text-sm text-muted-foreground break-all">
-                      contato@onneagency.com
+                      onneagency@gmail.com
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">
                       Respondemos em até 24h

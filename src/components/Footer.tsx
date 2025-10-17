@@ -56,8 +56,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Informações</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📞 +1 (555) 123-4567</li>
-              <li>📧 contato@onneagency.com</li>
+              <li>📞 +55 62 99695-8723</li>
+              <li>📧 onneagency@gmail.com</li>
               <li>🌎 Atendendo todo o território dos EUA</li>
             </ul>
           </div>
