@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo-onne.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold bg-gradient-neon bg-clip-text text-transparent mb-4">ONNE AGENCY</h3>
+            <img src={logo} alt="ONNE AGENCY" className="h-12 w-auto mb-4" />
             <p className="text-muted-foreground mb-4">
               Transformando visão em resultados reais. Marketing inteligente para brasileiros nos EUA.
             </p>

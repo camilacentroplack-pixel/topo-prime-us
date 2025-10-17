@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo-onne.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              ONNE AGENCY
-            </h1>
+            <img src={logo} alt="ONNE AGENCY" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Menu */}
