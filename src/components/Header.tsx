@@ -16,11 +16,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border shadow-soft z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 h-20">
+        <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="ONNE AGENCY Logo" className="h-16" />
+            <img src={logo} alt="ONNE AGENCY Logo" className="h-14 max-h-14 object-contain" />
           </div>
 
           {/* Desktop Menu */}
