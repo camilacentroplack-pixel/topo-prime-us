@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <img src={logo} alt="ONNE AGENCY" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="ONNE AGENCY" className="h-[624px] w-auto mb-4" />
             <p className="text-muted-foreground mb-4">
               Transformando visão em resultados reais. Marketing inteligente para brasileiros nos EUA.
             </p>
