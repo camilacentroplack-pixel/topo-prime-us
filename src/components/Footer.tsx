@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <img src={logo} alt="ONNE AGENCY" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="ONNE AGENCY" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground mb-4">
               Transformando visão em resultados reais. Marketing inteligente para brasileiros nos EUA.
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Informações</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📞 +55 62 99695-8723</li>
+              <li>📞 +55 62 996958723</li>
               <li>📧 onneagency@gmail.com</li>
               <li>🌎 Atendendo todo o território dos EUA</li>
             </ul>
