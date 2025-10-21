@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="ONNE AGENCY Logo" className="h-20 max-h-full object-contain py-2" />
+            <img src={logo} alt="ONNE AGENCY Logo" className="h-16 object-contain" />
           </div>
 
           {/* Desktop Menu */}
